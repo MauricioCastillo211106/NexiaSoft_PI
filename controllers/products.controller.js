@@ -38,7 +38,8 @@ const produc_view = async function (req, res) {
 
 
 
-const produc_create = (req, res) => {
+const produc_create = async function (req, res) {
+
   getProduc.Data.create(
     {
       ambientHumidity: req.body.ambientHumidity,
@@ -49,12 +50,12 @@ const produc_create = (req, res) => {
     { fields: ["ambientHumidity", "soilHumidity", "ambientTemperature","luminosity"] }
 
   )
-    .then((r) => {
-      res.send("send successful");
-    })
-    .catch((err) => {
-      res.status(400).send(err);
-    });
+  .then((data) => {
+    res.send(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 };
 
 const Product_update = (req, res) => {
