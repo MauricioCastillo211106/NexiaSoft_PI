@@ -11,7 +11,7 @@ const Data = getData.sequelizeClient.define(
       primaryKey: true,
     },
     ambientHumidity: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         notNull: {
@@ -20,7 +20,7 @@ const Data = getData.sequelizeClient.define(
       }
     },
     soilHumidity:{
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         notNull: {
@@ -29,7 +29,7 @@ const Data = getData.sequelizeClient.define(
       }
     },
     ambientTemperature: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         notNull: {
@@ -38,7 +38,7 @@ const Data = getData.sequelizeClient.define(
       }
     },
     luminosity: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         notNull: {

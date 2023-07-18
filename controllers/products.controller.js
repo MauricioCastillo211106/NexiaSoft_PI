@@ -77,7 +77,7 @@ const Product_update = (req, res) => {
 
 const Product_delete = async function (req, res) {
   let id = req.body.id;
-  getProduc.products
+  getProduc.Data
     .destroy({ where: { id: id } })
     .then((r) => {
       res.status(200).json({ message: "Deleted successfully" });
